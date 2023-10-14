@@ -3,7 +3,9 @@ const app = express();
 const port = 3000;
 const mysql = require('mysql2');
 const cors = require('cors');
-
+app.use(cors({
+  origin: 'https://calm-plant-05f1cd510.3.azurestaticapps.net'
+}));
 // Database connection configuration
 const dbConfig = {
   host: 'sqlserverscore.mysql.database.azure.com',
@@ -24,9 +26,7 @@ db.connect((err) => {
   console.log('Connected to the database');
 });
 
-app.use(cors({
-  origin: 'https://calm-plant-05f1cd510.3.azurestaticapps.net'
-}));
+
 
 // Middleware to parse JSON requests
 app.use(express.json());
