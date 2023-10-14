@@ -6,12 +6,12 @@ const cors = require('cors');
 
 // Database connection configuration
 const dbConfig = {
-  host: "sqlserverscore.mysql.database.azure.com",
-  user: "adminscore",
-  password: "Password123",
-  database: "mygame_db",
+  host: 'sqlserverscore.mysql.database.azure.com',
+  user: 'adminscore',
+  password: 'Password123',
+  database: 'mygame_db',
   port: 3306,
-  ssl: false // Set to false since SSL certification is not required
+  
 };
 
 const db = mysql.createConnection(dbConfig);
