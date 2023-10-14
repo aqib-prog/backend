@@ -24,7 +24,10 @@ db.connect((err) => {
   console.log('Connected to the database');
 });
 
-app.use(cors());
+app.use(cors({
+  origin: 'https://calm-plant-05f1cd510.3.azurestaticapps.net'
+}));
+
 // Middleware to parse JSON requests
 app.use(express.json());
 
